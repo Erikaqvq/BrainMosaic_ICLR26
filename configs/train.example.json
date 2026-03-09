@@ -1,0 +1,71 @@
+{
+  "data": {
+    "in_channels": 122,
+    "eeg_split_pattern": "{split}.pt",
+    "eeg_scale": 1000000.0,
+    "normalize_token_emb": true,
+    "token_path": "PATH/TO/TOKEN_BANK_DIR",
+    "sent_emb_path": "PATH/TO/SENTENCE_EMBEDDINGS_PT",
+    "segmentation_path": "PATH/TO/SEGMENTATION_FILE_OPTIONAL",
+    "eeg_path": "PATH/TO/EEG_ROOT"
+  },
+  "runtime": {
+    "output_dir": "outputs/public_run",
+    "device": "cuda",
+    "seed": 42,
+    "num_workers": 4,
+    "batch_size": 32,
+    "resume": "",
+    "eval": false,
+    "world_size": 1,
+    "dist_url": "env://"
+  },
+  "train": {
+    "lr": 0.0001,
+    "lr_backbone": 0.00001,
+    "weight_decay": 0.0001,
+    "epochs": 50,
+    "lr_drop": 50,
+    "clip_max_norm": 0.1
+  },
+  "model": {
+    "encoder": "moderntcn",
+    "tcn_blocks_per_stage": [2],
+    "tcn_large_kernel_per_stage": [25],
+    "tcn_small_kernel_per_stage": [5],
+    "tcn_ffn_ratio": 2.0,
+    "tcn_downsample_ratio": 1,
+    "tcn_stem_dim": 122,
+    "tcn_size": 64,
+    "tcn_use_revin": false,
+    "tcn_dropout": 0.0,
+    "enc_layers": 3,
+    "dec_layers": 6,
+    "hidden_dim": 256,
+    "dropout": 0.1,
+    "num_queries": 8,
+    "slot_dropout_p": 0.2
+  },
+  "retrieval": {
+    "top_k": 5,
+    "exist_threshold": 0.7,
+    "cos_threshold": 0.7
+  },
+  "loss": {
+    "embed_loss": "both",
+    "tau": 0.07,
+    "lambda_infonce": 0.2,
+    "lambda_cos": 1.0,
+    "lambda_sent": 0.2,
+    "lambda_cls": 1.0,
+    "eos_coef": 0.3,
+    "cost_class": 1.0,
+    "cost_emb": 2.0,
+    "lambda_sentence_mode": 0.2,
+    "lambda_subjectivity": 0.2,
+    "lambda_semantic_focus": 0.2,
+    "sentence_mode_class_counts": null,
+    "subjectivity_class_counts": null,
+    "semantic_focus_class_counts": null
+  }
+}

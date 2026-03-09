@@ -1,0 +1,42 @@
+{
+  "input": {
+    "topk_json": "outputs/public_run/eval_embeddings/best_by_matching_acc.topk.json"
+  },
+  "output": {
+    "reconstruction_json": "outputs/public_run/reconstruction/reconstructed_sentences.json"
+  },
+  "llm": {
+    "endpoint": "https://YOUR_LLM_ENDPOINT/v1/chat/completions",
+    "model": "YOUR_MODEL_NAME",
+    "api_key": "YOUR_API_KEY",
+    "timeout_sec": 60
+  },
+  "generation": {
+    "num_candidates": 5,
+    "temperature": 0.7,
+    "max_tokens": 200
+  },
+  "prompt": {
+    "language": "zh",
+    "hint_threshold": 0.7,
+    "hint_thresholds": {
+      "sentence_mode": 0.7,
+      "subjectivity": 0.8,
+      "semantic_focus": 0.7
+    },
+    "hint_labels": {
+      "zh": {
+        "sentence_mode": ["陈述句", "疑问句", "否定句", "祈使句"],
+        "subjectivity": ["客观句", "主观句"],
+        "semantic_focus": ["第一人称句", "第二人称句", "第三人称句", "事物描述句", "事件动作句"]
+      },
+      "en": {
+        "sentence_mode": ["declarative", "interrogative", "negative", "imperative"],
+        "subjectivity": ["objective", "subjective"],
+        "semantic_focus": ["first-person", "second-person", "third-person", "thing-description", "event-action"]
+      }
+    },
+    "max_keywords": 12,
+    "max_chars": 20
+  }
+}

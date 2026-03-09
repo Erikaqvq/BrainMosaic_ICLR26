@@ -1,0 +1,10 @@
+bert_score==0.3.13
+nltk==3.9.1
+numpy==2.1.1
+openai==1.51.0
+rouge==1.0.1
+sentence_transformers==3.0.1
+torch==2.4.0
+transformers==4.43.4
+vec2text.egg==info
+wandb==0.18.3

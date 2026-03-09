@@ -1,0 +1,23 @@
+{
+  "data": {
+    "dataset": "Zuco_1",
+    "subjects": "ZAB",
+    "task": "task1-SR",
+    "eeg_path": "PATH/TO/EEG_ROOT",
+    "segmentation_path": "PATH/TO/SEGMENTATION",
+    "sentence_embedding_path": "PATH/TO/SENTENCE_EMB"
+  },
+  "model": {
+    "embedding_model_name": "gtr-t5-base",
+    "vec2text_model_name": "gtr-base"
+  },
+  "runtime": {
+    "device": "cuda",
+    "batch_size": 8,
+    "learning_rate": 0.0013,
+    "num_epochs": 40
+  },
+  "output": {
+    "result_dir": "PATH/TO/BASELINE_OUTPUT"
+  }
+}

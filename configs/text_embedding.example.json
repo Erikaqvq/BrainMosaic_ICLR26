@@ -1,0 +1,20 @@
+{
+  "model": {
+    "name_or_path": "Qwen/Qwen3-Embedding-8B"
+  },
+  "runtime": {
+    "device": "cuda",
+    "batch_size": 32,
+    "max_length": 128,
+    "truncate_dim": 256
+  },
+  "inputs": {
+    "sentences_file": "PATH/TO/sentences.xlsx",
+    "sentence_col": "sentence",
+    "tokens_file": "PATH/TO/token_explanations.json",
+    "token_key_col": "key",
+    "token_explanation_col": "explanation",
+    "use_expansion_text": true
+  },
+  "output_dir": "PATH/TO/text_assets"
+}

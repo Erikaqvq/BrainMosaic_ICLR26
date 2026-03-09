@@ -1,0 +1,19 @@
+{
+  "data": {
+    "dataset": "Chisco",
+    "subj": "01",
+    "task": "read",
+    "eeg_path": "PATH/TO/EEG_ROOT",
+    "segmentation_path": "PATH/TO/SEGMENTATION",
+    "label_path": "PATH/TO/LABEL_JSON",
+    "word_embedding_path": "PATH/TO/WORD_EMB_PT"
+  },
+  "runtime": {
+    "device": "cuda",
+    "batch_size": 64,
+    "seed": 42
+  },
+  "output": {
+    "checkpoint_path": "PATH/TO/CHECKPOINT_DIR"
+  }
+}

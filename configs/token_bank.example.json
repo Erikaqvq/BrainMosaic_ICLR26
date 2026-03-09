@@ -1,0 +1,10 @@
+{
+  "input": {
+    "word_embeddings_pt": "PATH/TO/text_assets/word_embeddings.pt"
+  },
+  "output": {
+    "token_bank_dir": "PATH/TO/token_bank"
+  },
+  "truncate_dim": 256,
+  "cluster_sim_threshold": 0.78
+}

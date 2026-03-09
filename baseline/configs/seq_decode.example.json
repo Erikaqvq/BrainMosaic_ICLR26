@@ -1,0 +1,18 @@
+{
+  "data": {
+    "dataset": "Chisco",
+    "subjects": ["01"],
+    "tasks": ["read"],
+    "eeg_root": "PATH/TO/EEG_ROOT",
+    "segmentation_path": "PATH/TO/SEGMENTATION",
+    "filter_path": "PATH/TO/FILTER_METADATA",
+    "word_embedding_path": "PATH/TO/WORD_EMB_PT"
+  },
+  "runtime": {
+    "device": "cuda",
+    "batch_size": 32
+  },
+  "output": {
+    "out_dir": "PATH/TO/BASELINE_OUTPUT"
+  }
+}
