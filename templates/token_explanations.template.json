@@ -1,0 +1,26 @@
+[
+  {
+    "key": "apple",
+    "explanation": "a kind of fruit"
+  },
+  {
+    "key": "orange juice",
+    "explanation": "a drink made from oranges"
+  },
+  {
+    "key": "library",
+    "explanation": "a place where people read or borrow books"
+  },
+  {
+    "key": "苹果",
+    "explanation": "一种常见水果"
+  },
+  {
+    "key": "每天",
+    "explanation": "表示每天、每日"
+  },
+  {
+    "key": "图书馆",
+    "explanation": "借书、看书的地方"
+  }
+]

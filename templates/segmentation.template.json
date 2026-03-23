@@ -1,0 +1,18 @@
+[
+  {
+    "sentence": "I eat apples every day.",
+    "tokens": ["I", "eat", "apples", "every day"]
+  },
+  {
+    "sentence": "She likes fresh orange juice.",
+    "tokens": ["she", "likes", "fresh", "orange juice"]
+  },
+  {
+    "sentence": "我每天吃苹果。",
+    "tokens": ["我", "每天", "吃", "苹果"]
+  },
+  {
+    "sentence": "今天我们去图书馆。",
+    "tokens": ["今天", "我们", "去", "图书馆"]
+  }
+]
